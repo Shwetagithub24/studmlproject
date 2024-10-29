@@ -3,7 +3,7 @@ from src.studmlproject.exception import CustomException
 from src.studmlproject.components.data_ingestion import DataIngestion
 from src.studmlproject.components.data_ingestion import DataIngestionConfig
 from src.studmlproject.components.data_transformation import DataTransformationConfig,DataTransformation
-#from src.studmlproject.components.model_tranier import ModelTrainerConfig,ModelTrainer
+from src.studmlproject.components.model_tranier import ModelTrainerConfig,ModelTrainer
 
 import sys
 
@@ -22,8 +22,8 @@ if __name__=="__main__":
 
         ## Model Training
 
-        #model_trainer=ModelTrainer()
-        #print(model_trainer.initiate_model_trainer(train_arr,test_arr))
+        model_trainer=ModelTrainer()
+        print(model_trainer.initiate_model_trainer(train_arr,test_arr))
         
     except Exception as e:
         logging.info("Custom Exception")

@@ -17,7 +17,7 @@ import os
 
 @dataclass
 class DataTransformationConfig:  #input for data transformation
-    preprocessor_obj_file_path = os.path.join('artifacts','preprocessor.pkl')  # to save the best model after feature engineering
+    preprocessor_obj_file_path = os.path.join('artifacts','preprocessor.pkl')  # to save the model after feature engineering
 
 class DataTransformation:
     def __init__(self):
