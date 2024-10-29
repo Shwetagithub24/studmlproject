@@ -24,7 +24,7 @@ class DataIngestion:
         try:
             ##reading the data from mysql
             logging.info("Reading data from mysql database")
-            df=read_sql_data()
+            df=pd.read_csv(os.path.join('notebook/data','raw.csv'))
             logging.info("Reading completed mysql database")
 
             #save data to raw data file
