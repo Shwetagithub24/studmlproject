@@ -48,10 +48,11 @@ def save_object(file_path, obj):
         dir_path = os.path.dirname(file_path)
         os.makedirs(dir_path, exist_ok=True)
         with open(file_path, "wb") as file_obj:
-            pickle.dump(obj, file_obj)
-            
+            dill.dump(obj, file_obj)  # Use dill instead of pickle
     except Exception as e:
-        raise CustomException(e,sys)
+        raise CustomException(e, sys)
+
+
     
 def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     try:
@@ -84,12 +85,10 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     except Exception as e:
         raise CustomException(e, sys)
     
-
 def load_object(file_path):
-    '''import pickle file and load it'''
+    '''import dill file and load it'''
     try:
         with open(file_path, "rb") as file_obj:
-            return pickle.load(file_obj)
-
+            return dill.load(file_obj)  # Use dill instead of pickle
     except Exception as e:
         raise CustomException(e, sys)
