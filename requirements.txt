@@ -3,9 +3,10 @@ pandas
 python-dotenv
 mysql-connector-python
 pymysql
-scikit-learn
+scikit-learn==0.24.2
 seaborn
 catboost
 xgboost
 mlflow
+dill
 # -e .  #to creat setup.py automatically while installing requirements
